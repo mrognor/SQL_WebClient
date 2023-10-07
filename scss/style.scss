@@ -1,0 +1,90 @@
+@font-face {
+    font-family: "Inter";
+    src: local(""), url("../fonts/Gothic-A1.css") format("truetype");
+    font-weight: 400;
+}
+
+$midnight_blue: #0E1C36;
+$sky_blue: #D7F9FF;
+
+html,
+body {
+    font: 400 24px 'Inter', sans-serif;
+    background-color: $midnight_blue;
+    border-radius: 32px;
+    margin-top: 5px;
+    padding: 0 30px 0 30px;
+}
+
+
+@mixin usual_block {
+    background-color: white;
+    border-radius: 32px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    min-width: 160px;
+    min-height: 40px;
+}
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    margin-bottom: 20px;
+    &__logo {
+        @include usual_block;
+    }
+
+    &__button {
+        @include usual_block;
+        cursor: pointer;
+        &:hover {
+            color:red;
+        }
+    }
+}
+
+.input {
+    margin-bottom: 20px;
+    display: flex;
+}
+input {
+    border: none;
+    font: 400 24px 'Inter', sans-serif;
+    @include usual_block;
+    box-sizing: border-box;
+    padding: 0 20px 0 20px;
+    min-width: 160px;
+    width:100%;
+    //пореопределение свойств из шаблона
+        align-items: stretch;
+        text-align: left;
+}
+
+
+.output {
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+		&__command {
+            @include usual_block;
+            border-radius: 32px 32px 0 0;
+            box-shadow: none;
+		}
+
+		&__result {
+            @include usual_block;
+            background-color: $sky_blue;
+            border-radius: 0 0 32px 32px;
+            box-shadow: none;
+            overflow: auto;
+		}
+}
+
+
+.wrapper {
+    max-width: 1600px;
+    margin: 0 auto;
+}

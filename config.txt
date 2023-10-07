@@ -1,0 +1,1 @@
+PsqlPath = C:\Program Files\PostgreSQL\16\bin\psql.exe

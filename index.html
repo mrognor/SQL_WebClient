@@ -1,0 +1,35 @@
+<!DOCTYPE xhtml>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="scripts.js"></script>
+    <script>        
+        window.onload = function() {
+            console.log("test");
+            document.getElementById('login').value = localStorage.getItem("login");
+            document.getElementById('password').value = localStorage.getItem("password");
+        };
+    </script>
+
+    <title>SQL client</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="header__logo">SQL client</div>
+            <div><input type="text" id="login" placeholder="Login"></div>
+            <div><input type="password" id="password" placeholder="Password"></div>
+            <div class="header__button" onclick="ClearAll()">Clear</div>
+        </div>
+
+        <div class="input">
+            <input type="text" placeholder="Insert command" onkeyup="SendCommand(event, this.value)">
+        </div>
+
+        <div class="output-list" id="output-list">
+        </div>
+    </div>
+</body>
+</html>
