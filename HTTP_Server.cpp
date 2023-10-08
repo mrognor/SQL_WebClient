@@ -19,8 +19,22 @@ public:
 		if (parsedRequstHeaderVec[0] == "GET")
 		{
 			auto commandVec = EN::Split(parsedRequstHeaderVec[1], "_");
-			
 			std::string command = commandVec[0];
+
+			if (command == "/CommandRes")
+			{
+				std::string textResponce;
+				EN::ReadFile("res.txt", textResponce);
+				
+				std::string responce = "HTTP/1.1 200 OK \r\n";
+				responce += "content-type: text/html\r\n";
+				responce += "content-length: " + std::to_string(textResponce.length()) + "\r\n";
+				responce += "connection: closed\r\n\r\n";
+				responce += textResponce;
+				SendToClient(clientSocket, responce);
+				return;
+			}
+
 			std::string login = commandVec[1];
 			std::string password = commandVec[2];
 			std::string commandArg = EN::Base64StringToRegularString(commandVec[3]);

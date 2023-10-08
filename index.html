@@ -7,6 +7,7 @@
     <script src="scripts.js"></script>
     <script>        
         window.onload = function() {
+            // localStorage.clear();
             console.log("test");
             document.getElementById('login').value = localStorage.getItem("login");
             document.getElementById('password').value = localStorage.getItem("password");
@@ -25,7 +26,7 @@
         </div>
 
         <div class="input">
-            <input type="text" placeholder="Insert command" onkeyup="SendCommand(event, this.value)">
+            <input type="text" placeholder="Insert command" id="inputPole" onkeyup="SendCommand(event, this.value)">
         </div>
 
         <div class="output-list" id="output-list">
