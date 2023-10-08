@@ -6,10 +6,14 @@
 html,
 body {
   font: 400 24px "Inter", sans-serif;
-  background-color: #0E1C36;
   border-radius: 32px;
-  margin-top: 5px;
   padding: 0 30px 0 30px;
+  height: 100%;
+}
+
+html {
+  background: rgb(223, 69, 185);
+  background: linear-gradient(140deg, rgb(223, 69, 185) 0%, rgb(112, 143, 242) 57%, rgb(255, 141, 193) 100%);
 }
 
 .header {
@@ -28,6 +32,7 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   min-width: 160px;
   min-height: 40px;
+  opacity: 80%;
 }
 .header__button {
   background-color: white;
@@ -39,6 +44,7 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   min-width: 160px;
   min-height: 40px;
+  opacity: 80%;
   cursor: pointer;
 }
 .header__button:hover {
@@ -62,6 +68,7 @@ input {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   min-width: 160px;
   min-height: 40px;
+  opacity: 80%;
   box-sizing: border-box;
   padding: 0 20px 0 20px;
   min-width: 160px;
@@ -71,8 +78,9 @@ input {
 }
 
 .output {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   margin-top: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 32px;
 }
 .output__command {
   background-color: white;
@@ -84,6 +92,7 @@ input {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   min-width: 160px;
   min-height: 40px;
+  opacity: 80%;
   justify-content: left;
   padding: 0 20px 0 20px;
   border-radius: 32px 32px 0 0;
@@ -99,9 +108,10 @@ input {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   min-width: 160px;
   min-height: 40px;
+  opacity: 80%;
   justify-content: left;
   padding: 0 20px 0 20px;
-  background-color: #D7F9FF;
+  background-color: #d7e0ff;
   border-radius: 0 0 32px 32px;
   box-shadow: none;
   overflow: auto;
