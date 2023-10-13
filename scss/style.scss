@@ -18,8 +18,9 @@ body {
 
 }
 html {
-    background: rgb(223,69,185);
-    background: linear-gradient(140deg, rgba(223,69,185,1) 0%, rgba(112,143,242,1) 57%, rgba(255,141,193,1) 100%);
+    background: rgb(223,69,185) no-repeat;
+    background: linear-gradient(140deg, rgba(223,69,185,1) 0%, rgba(112,143,242,1) 57%, rgba(255,141,193,1) 100%) no-repeat;
+    background-attachment: fixed;
 }
 
 @mixin usual_block {
@@ -56,6 +57,9 @@ html {
 .input {
     margin-bottom: 20px;
     display: flex;
+    &__red {
+        background-color: rgb(255, 175, 175);
+    }
 }
 input {
     border: none;
@@ -69,7 +73,6 @@ input {
         align-items: stretch;
         text-align: left;
 }
-
 
 .output {
     margin-top: 20px;
