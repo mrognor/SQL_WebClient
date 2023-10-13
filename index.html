@@ -1,19 +1,9 @@
-<!DOCTYPE xhtml>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
-    <script src="scripts.js"></script>
-    <script>        
-        window.onload = function() {
-            // localStorage.clear();
-            console.log("test");
-            document.getElementById('login').value = localStorage.getItem("login");
-            document.getElementById('password').value = localStorage.getItem("password");
-        };
-    </script>
-
     <title>SQL client</title>
 </head>
 <body>
@@ -33,4 +23,15 @@
         </div>
     </div>
 </body>
+
+<script src="scripts/scripts.js"></script>
+<script>        
+    window.onload = function() {
+        // localStorage.clear();
+        console.log("test");
+        document.getElementById('login').value = localStorage.getItem("login");
+        document.getElementById('password').value = localStorage.getItem("password");
+    };
+</script>
+
 </html>

@@ -24,7 +24,36 @@ function SendCommand(event, command) {
             document.querySelector("#inputPole").value = "";
     }
 
-    if (event.key === "Enter" && command !== null && command.length != 0) {
+    if (event.key === "Enter") {
+        var isAllFilled = true;
+        if (command === null || command.length == 0) {
+            document.querySelector('#inputPole').classList.add('input__red');
+            isAllFilled = false;
+        }
+        else {
+            document.querySelector('#inputPole').classList.remove('input__red');
+        }
+                
+        if (document.querySelector('#login').value == "") {
+            document.querySelector('#login').classList.add('input__red');
+            isAllFilled = false
+        }
+        else {
+            document.querySelector('#login').classList.remove('input__red');
+        }
+
+        if (document.querySelector('#password').value == "") {
+            document.querySelector('#password').classList.add('input__red');
+            isAllFilled = false
+        }
+        else {
+            document.querySelector('#password').classList.remove('input__red');
+        }
+
+        if (!isAllFilled) {
+            return;
+        }
+
         Counter = -1;
         localStorage.setItem("login", document.getElementById('login').value);
         localStorage.setItem("password", document.getElementById('password').value);

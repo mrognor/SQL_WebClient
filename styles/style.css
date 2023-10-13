@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Inter";
-  src: local(""), url("../fonts/Gothic-A1.css") format("truetype");
+  src: local(""), url("../fonts/Inter-Regular.ttf") format("truetype");
   font-weight: 400;
 }
 html,
@@ -12,8 +12,9 @@ body {
 }
 
 html {
-  background: rgb(223, 69, 185);
-  background: linear-gradient(140deg, rgb(223, 69, 185) 0%, rgb(112, 143, 242) 57%, rgb(255, 141, 193) 100%);
+  background: rgb(223, 69, 185) no-repeat;
+  background: linear-gradient(140deg, rgb(223, 69, 185) 0%, rgb(112, 143, 242) 57%, rgb(255, 141, 193) 100%) no-repeat;
+  background-attachment: fixed;
 }
 
 .header {
@@ -54,6 +55,9 @@ html {
 .input {
   margin-bottom: 20px;
   display: flex;
+}
+.input__red {
+  background-color: rgb(255, 175, 175);
 }
 
 input {
