@@ -35,9 +35,16 @@ public:
 				return;
 			}
 
-			std::string login = commandVec[1];
-			std::string password = commandVec[2];
-			std::string commandArg = EN::Base64StringToRegularString(commandVec[3]);
+			std::string login = "";
+			std::string password = "";
+			std::string commandArg = "";
+
+			if (parsedRequstHeaderVec.size() == 4)
+			{
+				login = commandVec[1];
+				password = commandVec[2];
+				commandArg = EN::Base64StringToRegularString(commandVec[3]);
+			}	
 
 			if (command == "/Command" && login != "" && password != "" && commandArg != "")
 			{
