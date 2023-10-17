@@ -107,9 +107,6 @@ textarea {
   margin-top: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   border-radius: 32px;
-  animation-name: appear;
-  animation-duration: 1s;
-  animation-timing-function: linear;
 }
 .output__command {
   background-color: white;
